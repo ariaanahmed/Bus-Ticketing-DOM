@@ -1,13 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Ticketing</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+    <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- raleway font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .raleway {
+            font-family: "Raleway", sans-serif;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <header class="bg-red-300">
+        <nav class="py-3  px-2 container mx-auto">
+            <!-- lg nav -->
+            <div class="large-menu hidden md:block">
+                <div class="flex justify-between items-center">
+
+                    <!-- logo - .logo+ul>li*4>a-->
+                    <div class="logo font-bold raleway text-xl">Road Royals</div>
+
+                    <!-- menu items -->
+                    <ul class="flex space-x-12">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Destination</a></li>
+                        <li><a href="#">Search</a></li>
+                    </ul>
+
+                    <!-- button -->
+                    <div>
+                        <button
+                            class="flex gap-2 items-center bg-white text-green-500 font-bold px-3 py-1 rounded-md border-3 border-green-500">
+                            <span>Bus</span>
+                            <img class="w-5" src="./images/bus-logo.png" alt="">
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- sm nav -->
+            <div class="small-menu block md:hidden">
+                <div class="flex justify-between">
+
+                    <div class="logo font-bold raleway text-xl">Road Royals</div>
+                    
+                    <div class="text-right">
+                        <!-- menu icon -->
+                        <i class="fa-solid fa-bars" onclick="toggle()"></i>
+
+                        <!-- menu items -->
+                        <div class="hidden" id="sm-nav-ul">
+                            <ul class="flex flex-col">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Destination</a></li>
+                                <li><a href="#">Search</a></li>
+                                <!-- button -->
+                                <div>
+                                    <button
+                                        class="flex gap-2 items-center bg-white text-green-500 font-bold px-3 py-1 rounded-md border-3 border-green-500">
+                                        <span>Bus</span>
+                                        <img class="w-5" src="./images/bus-logo.png" alt="">
+                                    </button>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </nav>
+        <section id="banner"></section>
+    </header>
+    <main></main>
+    <footer></footer>
+
     <script src="./app.js"></script>
 </body>
+
 </html>
